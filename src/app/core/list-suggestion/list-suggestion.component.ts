@@ -14,7 +14,9 @@ title: 'Organiser une journée team building',
 description: 'Suggestion pour organiser une journée de team building pour renforcer les liens entre les membres de l\'équipe.',
 category: 'Événements',
 date: new Date('2025-01-20'),
-status: 'acceptee'
+status: 'acceptee',
+likes: 0,
+favorited: false
 },
 {
 id: 2,
@@ -38,7 +40,9 @@ title: 'Moderniser l\'interface utilisateur',
 description: 'Refonte complète de l\'interface utilisateur pour une meilleure expérience utilisateur.',
 category: 'Technologie',
 date: new Date('2025-01-30'),
-status: 'en_attente'
+status: 'en_attente',
+likes: 0,
+favorited: false
 },
 {
 id: 5,
@@ -46,6 +50,25 @@ title: 'Formation à la sécurité informatique',
 description: 'Organisation d\'une formation sur les bonnes pratiques de sécurité informatique pour tous les employés.',
 category: 'Formation',
 date: new Date('2025-02-05'),
-status: 'acceptee'
+status: 'acceptee',
+likes: 0,
+favorited: false
 }];
+
+favoriteSuggestions: Suggestion[] = [];
+searchTerm: string = '';
+
+
+likeSuggestion(suggestion: Suggestion) {
+  if (suggestion.likes !== undefined) {
+    suggestion.likes++;
+  }
+}
+
+addToFavorites(suggestion: Suggestion) {
+  if (!this.favoriteSuggestions.includes(suggestion)) {
+    this.favoriteSuggestions.push(suggestion);
+    suggestion.favorited = true;
+  }
+}
 }
