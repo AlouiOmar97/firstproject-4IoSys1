@@ -6,7 +6,7 @@ import { AnnonceListComponent } from './annonce-list/annonce-list.component';
 import { AnnonceAddComponent } from './annonce-add/annonce-add.component';
 
 const routes: Routes= [
-  { path: 'annonce',  component: AnnonceComponent,
+  { path: '',  component: AnnonceComponent,
     children:[
       { path: 'list', component: AnnonceListComponent },
       { path: 'add', component: AnnonceAddComponent}

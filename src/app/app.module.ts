@@ -5,12 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListSuggestionComponent } from './core/list-suggestion/list-suggestion.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SuggestionDetailsComponent } from './core/suggestion-details/suggestion-details.component';
-import { AnnonceModule } from './annonce/annonce.module';
+import { AddSuggestionComponent } from './core/add-suggestion/add-suggestion.component';
+//import { AnnonceModule } from './annonce/annonce.module';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,14 @@ import { AnnonceModule } from './annonce/annonce.module';
     ListSuggestionComponent,
     HomeComponent,
     NotFoundComponent,
-    SuggestionDetailsComponent
+    SuggestionDetailsComponent,
+    AddSuggestionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AnnonceModule,
+   // AnnonceModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [

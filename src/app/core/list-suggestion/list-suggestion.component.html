@@ -1,5 +1,6 @@
 <div class="container">
-    <h1 class="text-center mt-2 mb-2">Suggestion List</h1><br>
+    <h1 class="text-center mt-2 mb-2">Liste des Suggestions </h1><br>
+    <a class="btn btn-link" routerLink="/suggestion/add">Ajouter une Suggestion </a>
     <input type="text" class="form-control mb-3" placeholder="Rechercher des suggestions..." [(ngModel)]="searchTerm">
     <div>
         <div *ngFor="let suggestion of suggestions" class="card mb-3">
