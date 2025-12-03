@@ -11,18 +11,6 @@ import { Router } from '@angular/router';
   styleUrl: './add-suggestion.component.css'
 })
 export class AddSuggestionComponent {
-suggestion: Suggestion = {
-    id: 0,
-    title: '',
-    description: '',
-    category: '',
-    date: new Date().toISOString().split('T')[0],
-    status: 'en_attente',
-    likes: 0,
-    favorited: false
-  };
-
-  suggestionForm!: FormGroup;
   categories: string[] = [
   'Infrastructure et bâtiments',
   'Technologie et services numériques',
@@ -35,6 +23,21 @@ suggestion: Suggestion = {
   'Accessibilité',
   'Autre'
   ];
+
+  suggestion: Suggestion = {
+    id: 0,
+    title: '',
+    description: '',
+    //category: this.categories[0],
+    category: null!,
+    date: new Date().toISOString().split('T')[0],
+    status: 'en_attente',
+    likes: 0,
+    favorited: false
+  };
+  
+
+  suggestionForm!: FormGroup;
 
   constructor(private router: Router) {}
   ngOnInit() {    
